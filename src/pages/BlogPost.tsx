@@ -4,10 +4,11 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import { Calendar, Tag, ArrowLeft, ArrowRight } from "lucide-react";
-import { blogPosts } from "@/data/blogPosts";
+import { useData } from "@/contexts/DataContext";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { blogPosts, resolveImage } = useData();
   const post = blogPosts.find(p => p.slug === slug);
 
   if (!post) {
@@ -42,7 +43,11 @@ const BlogPost = () => {
             <div className="flex items-center gap-6 text-primary-foreground/90">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                {post.date}
+                {new Date(post.publishedAt).toLocaleDateString('pt-BR', {
+                  day: '2-digit',
+                  month: 'short',
+                  year: 'numeric'
+                })}
               </div>
               <div className="flex items-center gap-2">
                 <Tag className="w-4 h-4" />
@@ -59,7 +64,7 @@ const BlogPost = () => {
           <div className="max-w-4xl mx-auto">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src={post.image}
+                src={resolveImage(post.imageUrl)}
                 alt={post.title}
                 className="w-full h-[400px] object-cover"
               />
@@ -113,7 +118,7 @@ const BlogPost = () => {
                     <article className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 group">
                       <div className="relative h-48 overflow-hidden">
                         <img
-                          src={relatedPost.image}
+                          src={resolveImage(relatedPost.imageUrl)}
                           alt={relatedPost.title}
                           className="w-full h-full object-cover transition-transform group-hover:scale-110"
                         />

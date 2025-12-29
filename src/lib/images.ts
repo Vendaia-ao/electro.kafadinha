@@ -8,7 +8,7 @@ import aboutTeam from '@/assets/about/team.jpg';
 
 // Service images
 import commercialTransformer from '@/assets/services/commercial-transformer.jpg';
-import commercialDistribution from '@/assets/services/commercial-distribution.jpg';
+import commercialDistribution from '@/assets/services/commercial-distributio.jpg';
 import commercialEnergyManagement from '@/assets/services/commercial-energy-management.jpg';
 import residentialElectrical from '@/assets/services/residential-electrical.jpg';
 import residentialWater from '@/assets/services/residential-water.jpg';

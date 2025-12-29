@@ -6,9 +6,10 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Calendar, Tag, ArrowRight, Search } from "lucide-react";
-import { blogPosts } from "@/data/blogPosts";
+import { useData } from "@/contexts/DataContext";
 
 const BlogList = () => {
+  const { blogPosts, resolveImage } = useData();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
@@ -83,7 +84,7 @@ const BlogList = () => {
               >
                 <div className="relative h-56 overflow-hidden">
                   <img
-                    src={post.image}
+                    src={resolveImage(post.imageUrl)}
                     alt={post.title}
                     className="w-full h-full object-cover transition-transform group-hover:scale-110"
                   />
@@ -100,7 +101,11 @@ const BlogList = () => {
                   <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-3.5 h-3.5" />
-                      {post.date}
+                      {new Date(post.publishedAt).toLocaleDateString('pt-BR', {
+                        day: '2-digit',
+                        month: 'short',
+                        year: 'numeric'
+                      })}
                     </div>
                     <div className="flex items-center gap-1">
                       <Tag className="w-3.5 h-3.5" />
