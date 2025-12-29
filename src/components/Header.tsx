@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { scrollToSection } from "@/lib/navigation";
+import { navigateToSection } from "@/lib/navigation";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
@@ -37,7 +37,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3 transition-transform hover:scale-105">
+          <button onClick={() => navigateToSection('home')} className="flex items-center gap-3 transition-transform hover:scale-105">
             <img src={logo} alt="Electro Kafadinha Logo" className="h-12 w-auto" />
             <span
               className={cn(
@@ -49,18 +49,18 @@ const Header = () => {
             >
               Electro Kafadinha
             </span>
-          </a>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {menuItems.map((item) => (
               <button
                 key={item.label}
-                onClick={() => scrollToSection(item.href.substring(1))}
+                onClick={() => navigateToSection(item.href.substring(1))}
                 className={cn(
                   "font-medium transition-colors relative group",
-                  isScrolled 
-                    ? "text-foreground/80 hover:text-primary" 
+                  isScrolled
+                    ? "text-foreground/80 hover:text-primary"
                     : "text-white hover:text-white/90"
                 )}
               >
@@ -72,7 +72,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button variant="hero" size="lg" onClick={() => scrollToSection('contato')}>
+            <Button variant="hero" size="lg" onClick={() => navigateToSection('contato')}>
               Obter Solução
             </Button>
           </div>
@@ -100,7 +100,7 @@ const Header = () => {
                 <button
                   key={item.label}
                   onClick={() => {
-                    scrollToSection(item.href.substring(1));
+                    navigateToSection(item.href.substring(1));
                     setIsMobileMenuOpen(false);
                   }}
                   className="text-foreground/80 hover:text-primary font-medium transition-colors px-6 py-2 text-left"
@@ -109,12 +109,12 @@ const Header = () => {
                 </button>
               ))}
               <div className="px-6 pt-2">
-                <Button 
-                  variant="hero" 
-                  size="lg" 
+                <Button
+                  variant="hero"
+                  size="lg"
                   className="w-full"
                   onClick={() => {
-                    scrollToSection('contato');
+                    navigateToSection('contato');
                     setIsMobileMenuOpen(false);
                   }}
                 >

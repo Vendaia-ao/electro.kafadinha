@@ -14,10 +14,17 @@ import logo from "@/assets/logo.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const navigateToSection = (sectionId: string) => {
+    // Check if we're on the home page
+    if (window.location.pathname === '/') {
+      // We're on home, just scroll to section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      // We're on another page, navigate to home with hash
+      window.location.href = `/#${sectionId}`;
     }
   };
 
@@ -92,7 +99,7 @@ const Footer = () => {
               {quickLinks.map((link) => (
                 <li key={link.id}>
                   <button
-                    onClick={() => scrollToSection(link.id)}
+                    onClick={() => navigateToSection(link.id)}
                     className="text-white/80 hover:text-secondary transition-all duration-300 text-sm flex items-center gap-2 group cursor-pointer"
                   >
                     <ChevronRight className="w-4 h-4 text-secondary group-hover:translate-x-1 transition-transform" />
@@ -119,13 +126,13 @@ const Footer = () => {
                 "Projetos Elétricos"
               ].map((service) => (
                 <li key={service}>
-                  <a
-                    href="#servicos"
-                    className="text-white/80 hover:text-secondary transition-all duration-300 text-sm flex items-center gap-2 group"
+                  <button
+                    onClick={() => navigateToSection('servicos')}
+                    className="text-white/80 hover:text-secondary transition-all duration-300 text-sm flex items-center gap-2 group cursor-pointer"
                   >
                     <Zap className="w-3 h-3 text-secondary group-hover:scale-125 transition-transform" />
                     <span className="group-hover:translate-x-1 transition-transform">{service}</span>
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
