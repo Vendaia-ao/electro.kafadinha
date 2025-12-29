@@ -48,7 +48,13 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <div key={project.id} onClick={() => setSelectedProject(project)}>
+            <div
+              key={project.id}
+              onClick={() => setSelectedProject({
+                ...project,
+                image: resolveImage(project.imageUrl)
+              })}
+            >
               <ProjectCard
                 image={resolveImage(project.imageUrl)}
                 title={project.title}

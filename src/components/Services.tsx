@@ -64,10 +64,13 @@ const Services = () => {
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     {service.description}
                   </p>
-                  <Button 
-                    variant="ghost" 
+                  <Button
+                    variant="ghost"
                     className="group p-0 h-auto hover:bg-transparent"
-                    onClick={() => setSelectedService(service)}
+                    onClick={() => setSelectedService({
+                      ...service,
+                      image: resolveImage(service.imageUrl)
+                    })}
                   >
                     <span className="text-primary">Ler Mais</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
