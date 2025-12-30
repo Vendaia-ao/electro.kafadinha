@@ -18,13 +18,13 @@ const Hero = () => {
   const slides = [
     {
       image: customHeroImage1 ? getImage(customHeroImage1) : heroImages.engineer,
-      title: "Experimente o poder do profissionalismo",
-      subtitle: "Soluções elétricas de excelência para o seu negócio",
+      title: "Soluções Estratégicas em Energia e Água",
+      subtitle: "10+ anos de experiência no mercado angolano",
     },
     {
       image: customHeroImage2 ? getImage(customHeroImage2) : heroImages.installation,
-      title: "Fornecendo energia e água com confiança",
-      subtitle: "25+ anos de experiência no mercado angolano",
+      title: "Parceiro Estratégico na Gestão de Serviços Essenciais",
+      subtitle: "Como agente autorizado EPAL, elevamos o padrão de atendimento e suporte comercial com transparência e rigor operacional",
     },
   ];
 
