@@ -13,7 +13,7 @@ const About = () => {
     },
     {
       icon: Droplet,
-      title: "Distribuição de Água",
+      title: "Gestão e Distribuição de Água",
       description: "Agente autorizado EPAL-EP",
     },
     {
