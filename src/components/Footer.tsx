@@ -160,16 +160,16 @@ const Footer = () => {
                   className="flex items-center gap-3 text-white/90 hover:text-secondary transition-all duration-300 text-sm group"
                 >
                   <Phone className="w-5 h-5 text-secondary flex-shrink-0 group-hover:scale-125 group-hover:text-primary transition-all duration-300" />
-                  <span>+244 923 456 789</span>
+                  <span>+244 924 792 015</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@electrokafadinha.ao"
+                  href="mailto:electrokafadinhageral@gmail.com"
                   className="flex items-center gap-3 text-white/90 hover:text-secondary transition-all duration-300 text-sm group"
                 >
                   <Mail className="w-5 h-5 text-secondary flex-shrink-0 group-hover:scale-125 group-hover:text-primary transition-all duration-300" />
-                  <span>info@electrokafadinha.ao</span>
+                  <span>electrokafadinhageral@gmail.com</span>
                 </a>
               </li>
             </ul>
@@ -181,7 +181,7 @@ const Footer = () => {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-secondary to-transparent"></div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/70">
             <p className="animate-fade-in">
-              © {currentYear} Electro Kafadinha, LDA. Todos os direitos reservados.
+              © {currentYear} Electro Kafadinha, LDA. Todos os direitos reservados. Desenvolvido pela Vendaia
             </p>
             <div className="flex flex-wrap justify-center items-center gap-6">
               <a href="#" className="hover:text-secondary transition-colors duration-300">
