@@ -23,7 +23,7 @@ const Hero = () => {
     },
     {
       image: customHeroImage2 ? getImage(customHeroImage2) : heroImages.installation,
-      title: "Parceiro Estratégico na Gestão de Serviços Essenciais",
+      title: "Liderança e Rigor na Gestão de Serviços Públicos",
       subtitle: "Como agente autorizado EPAL, elevamos o padrão de atendimento e suporte comercial com transparência e rigor operacional",
     },
   ];
