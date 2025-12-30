@@ -25,8 +25,8 @@ const About = () => {
 
   const features = [
     "Agente autorizado EPAL-EP",
-    "Redes e PTs privados",
     "Manutenção preventiva e corretiva",
+    "Redes e PTs privados",
     "Soluções personalizadas",
   ];
 
