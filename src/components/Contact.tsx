@@ -52,14 +52,14 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefone",
-      details: "+244 900 000 000",
-      link: "tel:+244900000000",
+      details: "+244 924 792 015",
+      link: "https://wa.me/244924792015?text=Olá! Gostaria de obter mais informações sobre os serviços da Eletro-Kafadinha.",
     },
     {
       icon: Mail,
       title: "Email",
-      details: "info@electrokafadinha.ao",
-      link: "mailto:info@electrokafadinha.ao",
+      details: "electrokafadinhageral@gmail.com",
+      link: "mailto:electrokafadinhageral@gmail.com",
     },
     {
       icon: Clock,
