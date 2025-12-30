@@ -18,7 +18,7 @@ const About = () => {
     },
     {
       icon: Wrench,
-      title: "Manutenção de Instalações Eléctricas de Alta, Media, Baixa Tensão, Iluminação Publica e Grupos Geradores",
+      title: "Manutenção de Instalações Eléctricas, Iluminação Publica e Grupos Geradores",
       description: "Sistemas de backup e energia ininterrupta",
     },
   ];
