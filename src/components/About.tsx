@@ -8,8 +8,8 @@ const About = () => {
   const benefits = [
     {
       icon: Zap,
-      title: "Soluções de Energia de Emergência",
-      description: "Sistemas de backup e energia ininterrupta",
+      title: "Instalações Eléctricas de Alta, Media, Baixa Tensão e Iluminação Publica",
+      description: "Equipe técnica certificada e experiente",
     },
     {
       icon: Droplet,
@@ -18,8 +18,8 @@ const About = () => {
     },
     {
       icon: Wrench,
-      title: "Instalações Profissionais",
-      description: "Equipe técnica certificada e experiente",
+      title: "Manutenção de Instalações Eléctricas de Alta, Media, Baixa Tensão, Iluminação Publica e Grupos Geradores",
+      description: "Sistemas de backup e energia ininterrupta",
     },
   ];
 
@@ -40,8 +40,7 @@ const About = () => {
               badge="Sobre Nós"
               title="Empresa líder em energia e água"
               description="A Electro Kafadinha, LDA é uma empresa angolana privada especializada nos setores de água 
-              e eletricidade. Como agente autorizado da EPAL-EP, fornecemos energia elétrica em zonas 
-              onde mantemos redes e PTs privados, além de realizar serviços técnicos especializados."
+              e eletricidade. Somos agentes da EPAL-EP e proprietários de redes e PTs privados, assegurando distribuição de energia através de ativos próprios e serviços especializados."
               alignment="left"
             />
 
