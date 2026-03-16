@@ -73,7 +73,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button variant="hero" size="lg" onClick={() => navigateToSection('contato')}>
-              Obter Solução
+              Obter Soluções
             </Button>
           </div>
 
@@ -118,7 +118,7 @@ const Header = () => {
                     setIsMobileMenuOpen(false);
                   }}
                 >
-                  Obter Solução
+                  Obter Soluções
                 </Button>
               </div>
             </nav>
